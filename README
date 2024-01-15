@@ -1,0 +1,22 @@
+	Lucrul cu fisiere binare, in special fisierele bmp e mult mai complicat decat credeam,
+si a trebuit sa ma documentez foarte bine in legatura cu deschiderea si scrierea fisierelor binare
+in C. Pentru citirea si scrierea unei imagini bmp am folosit header-ul pus la dispozitie pentru 
+aceasta tema si o matrice alocata dinamic, unde am stocat pixelii. Toti vectorii si toate matricile 
+folosite au fost alocate dinamic. 
+	Bitmap-ul fiind inversat, primul rand citit a fost stocat in ultimul rand al matricei, pentru a
+nu lucra cu imaginea rasturnata, ci cu imaginea reala. Pentru salvarea unei imagini fisierul a fost creat
+si compus pe rand din headerele necesare si bitmapul prelucrat cu instructiunile citite.
+	Pentru inserarea altei imagini peste cea initiala, am mai deschis o variabila de tip FILE pentru a
+stoca informatiile si am copiat bitmapul sau o parte din acesta, daca nu incapea toata imaginea peste cea 
+initiala, in bitmapul imaginii originale.
+	Setarea culorii si grosimii creionului au fost simple, doar niste atribuiri de variabile. Desenarea 
+liniei, in schimb, combinand matematica cu informatica si algoritmica, a fost cea mai complicata cerinta din
+aceasta tema. Am folosit "midpoint line algorithm", un algoritm de trasare optimizata a liniilor intr-o matrice,
+deoarece nu am reusit sa implementez algoritmul descris pe ocw astfel incat outpul programului meu sa fie
+asemanator cu cel din checker. Apoi, desenarea dreptunghiului si triunghiului au fost simple, dupa implementarea
+corecta a algoritmului de desenare a unei linii.
+	Umplerea unui pixel si tuturor celor conectati cu acesta de aceeasi culoare a fost implementata cu ajutorul
+unei functii recursive, pentru a putea gasi toti vecinii care indeplineau conditia fara a trece de fiecare data 
+prin toata matricea.
+	A fost o tema destul de complicata si provocatoare, dar placuta pentru ca a fost mai complexa. Consider
+ca m-a ajutat foarte mult sa imi imbunatatesc abilitatile in ceea ce priveste programarea.
